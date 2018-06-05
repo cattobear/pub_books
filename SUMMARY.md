@@ -8,4 +8,5 @@
     * [组件注册](docs/componentsReg.md)
 * [过渡 & 动画](docs/transitions.md)
 * [工具](docs/tool.md)
+* [离线文档](docs/office.md)
 

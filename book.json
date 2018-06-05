@@ -5,6 +5,12 @@
         "lunr",
         "search",
         "highlight",
-        "livereload"
-    ]
+        "livereload",
+        "github"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/cattobear/pub_books"
+        }
+    }
 }

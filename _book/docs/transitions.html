@@ -1,0 +1,885 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>过渡 & 动画 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tool.html" />
+    
+    
+    <link rel="prev" href="componentsReg.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="base.html">
+            
+                <a href="base.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="guide.html">
+            
+                <a href="guide.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="components.html">
+            
+                <a href="components.html">
+            
+                    
+                    深入了解组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="componentsReg.html">
+            
+                <a href="componentsReg.html">
+            
+                    
+                    组件注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="transitions.html">
+            
+                <a href="transitions.html">
+            
+                    
+                    过渡 & 动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="tool.html">
+            
+                <a href="tool.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >过渡 & 动画</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>Vue &#x5728;&#x63D2;&#x5165;&#x3001;&#x66F4;&#x65B0;&#x6216;&#x8005;&#x79FB;&#x9664; DOM &#x65F6;&#xFF0C;&#x63D0;&#x4F9B;&#x591A;&#x79CD;&#x4E0D;&#x540C;&#x65B9;&#x5F0F;&#x7684;&#x5E94;&#x7528;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x3002;
+&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x5DE5;&#x5177;&#xFF1A;</p>
+<ul>
+<li>&#x5728; CSS &#x8FC7;&#x6E21;&#x548C;&#x52A8;&#x753B;&#x4E2D;&#x81EA;&#x52A8;&#x5E94;&#x7528; class</li>
+<li>&#x53EF;&#x4EE5;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9; CSS &#x52A8;&#x753B;&#x5E93;&#xFF0C;&#x5982; Animate.css</li>
+<li>&#x5728;&#x8FC7;&#x6E21;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528; JavaScript &#x76F4;&#x63A5;&#x64CD;&#x4F5C; DOM</li>
+<li>&#x53EF;&#x4EE5;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9; JavaScript &#x52A8;&#x753B;&#x5E93;&#xFF0C;&#x5982; Velocity.js</li>
+</ul>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x4F1A;&#x8BB2;&#x5230;&#x8FDB;&#x5165;&#x3001;&#x79BB;&#x5F00;&#x548C;&#x5217;&#x8868;&#x7684;&#x8FC7;&#x6E21;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x4E0B;&#x4E00;&#x8282;&#x7684; <a href="transitioning-state.html">&#x7BA1;&#x7406;&#x8FC7;&#x6E21;&#x72B6;&#x6001;</a>&#x3002;</p>
+<h2 id="&#x5355;&#x5143;&#x7D20;&#x7EC4;&#x4EF6;&#x7684;&#x8FC7;&#x6E21;">&#x5355;&#x5143;&#x7D20;/&#x7EC4;&#x4EF6;&#x7684;&#x8FC7;&#x6E21;</h2>
+<p>Vue &#x63D0;&#x4F9B;&#x4E86; <code>transition</code> &#x7684;&#x5C01;&#x88C5;&#x7EC4;&#x4EF6;&#xFF0C;&#x5728;&#x4E0B;&#x5217;&#x60C5;&#x5F62;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x548C;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x8FDB;&#x5165;/&#x79BB;&#x5F00;&#x8FC7;&#x6E21;</p>
+<ul>
+<li>&#x6761;&#x4EF6;&#x6E32;&#x67D3; (&#x4F7F;&#x7528; <code>v-if</code>)</li>
+<li>&#x6761;&#x4EF6;&#x5C55;&#x793A; (&#x4F7F;&#x7528; <code>v-show</code>)</li>
+<li>&#x52A8;&#x6001;&#x7EC4;&#x4EF6;</li>
+<li>&#x7EC4;&#x4EF6;&#x6839;&#x8282;&#x70B9;</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;show = !show&quot;</span>&gt;</span>
+    Toggle
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">transition</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;fade&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">new</span> Vue({
+  <span class="hljs-attr">el</span>: <span class="hljs-string">&apos;#demo&apos;</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">show</span>: <span class="hljs-literal">true</span>
+  }
+})
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.fade-enter-active</span>, <span class="hljs-selector-class">.fade-leave-active</span> {
+  <span class="hljs-attribute">transition</span>: opacity .<span class="hljs-number">5s</span>;
+}
+<span class="hljs-selector-class">.fade-enter</span>, <span class="hljs-selector-class">.fade-leave-to</span> <span class="hljs-comment">/* .fade-leave-active below version 2.1.8 */</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+<div id="demo">
+  <button v-on:click="show = !show">
+    Toggle
+  </button>
+  <transition name="demo-transition">
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+<script>
+new Vue({
+  el: '#demo',
+  data: {
+    show: true
+  }
+})
+</script>
+<style>
+.demo-transition-enter-active, .demo-transition-leave-active {
+  transition: opacity .5s
+}
+.demo-transition-enter, .demo-transition-leave-to {
+  opacity: 0
+}
+</style>
+
+
+&#x5F53;&#x63D2;&#x5165;&#x6216;&#x5220;&#x9664;&#x5305;&#x542B;&#x5728; `transition` &#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x65F6;&#xFF0C;Vue &#x5C06;&#x4F1A;&#x505A;&#x4EE5;&#x4E0B;&#x5904;&#x7406;&#xFF1A;
+
+1. &#x81EA;&#x52A8;&#x55C5;&#x63A2;&#x76EE;&#x6807;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5E94;&#x7528;&#x4E86; CSS &#x8FC7;&#x6E21;&#x6216;&#x52A8;&#x753B;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5728;&#x6070;&#x5F53;&#x7684;&#x65F6;&#x673A;&#x6DFB;&#x52A0;/&#x5220;&#x9664; CSS &#x7C7B;&#x540D;&#x3002;
+
+2. &#x5982;&#x679C;&#x8FC7;&#x6E21;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86; [JavaScript &#x94A9;&#x5B50;&#x51FD;&#x6570;](#JavaScript-&#x94A9;&#x5B50;)&#xFF0C;&#x8FD9;&#x4E9B;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x5C06;&#x5728;&#x6070;&#x5F53;&#x7684;&#x65F6;&#x673A;&#x88AB;&#x8C03;&#x7528;&#x3002;
+
+3. &#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230; JavaScript &#x94A9;&#x5B50;&#x5E76;&#x4E14;&#x4E5F;&#x6CA1;&#x6709;&#x68C0;&#x6D4B;&#x5230; CSS &#x8FC7;&#x6E21;/&#x52A8;&#x753B;&#xFF0C;DOM &#x64CD;&#x4F5C; (&#x63D2;&#x5165;/&#x5220;&#x9664;) &#x5728;&#x4E0B;&#x4E00;&#x5E27;&#x4E2D;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x3002;(&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x6307;&#x6D4F;&#x89C8;&#x5668;&#x9010;&#x5E27;&#x52A8;&#x753B;&#x673A;&#x5236;&#xFF0C;&#x548C; Vue &#x7684; `nextTick` &#x6982;&#x5FF5;&#x4E0D;&#x540C;)
+
+### &#x8FC7;&#x6E21;&#x7684;&#x7C7B;&#x540D;
+
+&#x5728;&#x8FDB;&#x5165;/&#x79BB;&#x5F00;&#x7684;&#x8FC7;&#x6E21;&#x4E2D;&#xFF0C;&#x4F1A;&#x6709; 6 &#x4E2A; class &#x5207;&#x6362;&#x3002;
+
+1. `v-enter`&#xFF1A;&#x5B9A;&#x4E49;&#x8FDB;&#x5165;&#x8FC7;&#x6E21;&#x7684;&#x5F00;&#x59CB;&#x72B6;&#x6001;&#x3002;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x63D2;&#x5165;&#x4E4B;&#x524D;&#x751F;&#x6548;&#xFF0C;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x63D2;&#x5165;&#x4E4B;&#x540E;&#x7684;&#x4E0B;&#x4E00;&#x5E27;&#x79FB;&#x9664;&#x3002;
+
+2. `v-enter-active`&#xFF1A;&#x5B9A;&#x4E49;&#x8FDB;&#x5165;&#x8FC7;&#x6E21;&#x751F;&#x6548;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x3002;&#x5728;&#x6574;&#x4E2A;&#x8FDB;&#x5165;&#x8FC7;&#x6E21;&#x7684;&#x9636;&#x6BB5;&#x4E2D;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x63D2;&#x5165;&#x4E4B;&#x524D;&#x751F;&#x6548;&#xFF0C;&#x5728;&#x8FC7;&#x6E21;/&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x79FB;&#x9664;&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x8FDB;&#x5165;&#x8FC7;&#x6E21;&#x7684;&#x8FC7;&#x7A0B;&#x65F6;&#x95F4;&#xFF0C;&#x5EF6;&#x8FDF;&#x548C;&#x66F2;&#x7EBF;&#x51FD;&#x6570;&#x3002;
+
+3. `v-enter-to`: **2.1.8&#x7248;&#x53CA;&#x4EE5;&#x4E0A;** &#x5B9A;&#x4E49;&#x8FDB;&#x5165;&#x8FC7;&#x6E21;&#x7684;&#x7ED3;&#x675F;&#x72B6;&#x6001;&#x3002;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x63D2;&#x5165;&#x4E4B;&#x540E;&#x4E0B;&#x4E00;&#x5E27;&#x751F;&#x6548; (&#x4E0E;&#x6B64;&#x540C;&#x65F6; `v-enter` &#x88AB;&#x79FB;&#x9664;)&#xFF0C;&#x5728;&#x8FC7;&#x6E21;/&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x79FB;&#x9664;&#x3002;
+
+4. `v-leave`:  &#x5B9A;&#x4E49;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x7684;&#x5F00;&#x59CB;&#x72B6;&#x6001;&#x3002;&#x5728;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#x7ACB;&#x523B;&#x751F;&#x6548;&#xFF0C;&#x4E0B;&#x4E00;&#x5E27;&#x88AB;&#x79FB;&#x9664;&#x3002;
+
+5. `v-leave-active`&#xFF1A;&#x5B9A;&#x4E49;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x751F;&#x6548;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x3002;&#x5728;&#x6574;&#x4E2A;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x7684;&#x9636;&#x6BB5;&#x4E2D;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#x7ACB;&#x523B;&#x751F;&#x6548;&#xFF0C;&#x5728;&#x8FC7;&#x6E21;/&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x79FB;&#x9664;&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x7684;&#x8FC7;&#x7A0B;&#x65F6;&#x95F4;&#xFF0C;&#x5EF6;&#x8FDF;&#x548C;&#x66F2;&#x7EBF;&#x51FD;&#x6570;&#x3002;
+
+6. `v-leave-to`: **2.1.8&#x7248;&#x53CA;&#x4EE5;&#x4E0A;** &#x5B9A;&#x4E49;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x7684;&#x7ED3;&#x675F;&#x72B6;&#x6001;&#x3002;&#x5728;&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x88AB;&#x89E6;&#x53D1;&#x4E4B;&#x540E;&#x4E0B;&#x4E00;&#x5E27;&#x751F;&#x6548; (&#x4E0E;&#x6B64;&#x540C;&#x65F6; `v-leave` &#x88AB;&#x5220;&#x9664;)&#xFF0C;&#x5728;&#x8FC7;&#x6E21;/&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x79FB;&#x9664;&#x3002;
+
+![Transition Diagram](/images/transition.png)
+
+&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x5728;&#x8FC7;&#x6E21;&#x4E2D;&#x5207;&#x6362;&#x7684;&#x7C7B;&#x540D;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#x7684; `<transition>`&#xFF0C;&#x5219; `v-` &#x662F;&#x8FD9;&#x4E9B;&#x7C7B;&#x540D;&#x7684;&#x9ED8;&#x8BA4;&#x524D;&#x7F00;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86; `<transition name="my-transition">`&#xFF0C;&#x90A3;&#x4E48; `v-enter` &#x4F1A;&#x66FF;&#x6362;&#x4E3A; `my-transition-enter`&#x3002;
+
+`v-enter-active` &#x548C; `v-leave-active` &#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x8FDB;&#x5165;/&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x7F13;&#x548C;&#x66F2;&#x7EBF;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7AE0;&#x8282;&#x4F1A;&#x6709;&#x4E2A;&#x793A;&#x4F8B;&#x8BF4;&#x660E;&#x3002;
+
+### CSS &#x8FC7;&#x6E21;
+
+&#x5E38;&#x7528;&#x7684;&#x8FC7;&#x6E21;&#x90FD;&#x662F;&#x4F7F;&#x7528; CSS &#x8FC7;&#x6E21;&#x3002;
+
+&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF1A;
+
+``` html
+<div id="example-1">
+  <button @click="show = !show">
+    Toggle render
+  </button>
+  <transition name="slide-fade">
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+```
+
+``` js
+new Vue({
+  el: &apos;#example-1&apos;,
+  data: {
+    show: true
+  }
+})
+```
+
+``` css
+/* &#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x5165;&#x548C;&#x79BB;&#x5F00;&#x52A8;&#x753B; */
+/* &#x8BBE;&#x7F6E;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x548C;&#x52A8;&#x753B;&#x51FD;&#x6570; */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+```
+
+
+<div id="example-1" class="demo">
+  <button @click="show = !show">
+    Toggle render
+  </button>
+  <transition name="slide-fade">
+    <p v-if="show">hello</p>
+  </transition>
+</div>
+<script>
+new Vue({
+  el: '#example-1',
+  data: {
+    show: true
+  }
+})
+</script>
+<style>
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+</style>
+
+
+### CSS &#x52A8;&#x753B;
+
+CSS &#x52A8;&#x753B;&#x7528;&#x6CD5;&#x540C; CSS &#x8FC7;&#x6E21;&#xFF0C;&#x533A;&#x522B;&#x662F;&#x5728;&#x52A8;&#x753B;&#x4E2D; `v-enter` &#x7C7B;&#x540D;&#x5728;&#x8282;&#x70B9;&#x63D2;&#x5165; DOM &#x540E;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x5220;&#x9664;&#xFF0C;&#x800C;&#x662F;&#x5728; `animationend` &#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x5220;&#x9664;&#x3002;
+
+&#x793A;&#x4F8B;&#xFF1A;(&#x7701;&#x7565;&#x4E86;&#x517C;&#x5BB9;&#x6027;&#x524D;&#x7F00;)
+
+``` html
+<div id="example-2">
+  <button @click="show = !show">Toggle show</button>
+  <transition name="bounce">
+    <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi tristique senectus et netus.</p>
+  </transition>
+</div>
+```
+
+``` js
+new Vue({
+  el: &apos;#example-2&apos;,
+  data: {
+    show: true
+  }
+})
+```
+
+``` css
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+```
+
+
+<div id="example-2" class="demo">
+  <button @click="show = !show">Toggle show</button>
+  <transition name="bounce">
+    <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi tristique senectus et netus.</p>
+  </transition>
+</div>
+
+<p><style>
+  .bounce-enter-active {
+    -webkit-animation: bounce-in .5s;
+    animation: bounce-in .5s;
+  }
+  .bounce-leave-active {
+    -webkit-animation: bounce-in .5s reverse;
+    animation: bounce-in .5s reverse;
+  }
+  @keyframes bounce-in {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes bounce-in {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+</style></p>
+<script>
+new Vue({
+  el: '#example-2',
+  data: {
+    show: true
+  }
+})
+</script>
+
+
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x8FC7;&#x6E21;&#x7684;&#x7C7B;&#x540D;">&#x81EA;&#x5B9A;&#x4E49;&#x8FC7;&#x6E21;&#x7684;&#x7C7B;&#x540D;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x7279;&#x6027;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x8FC7;&#x6E21;&#x7C7B;&#x540D;&#xFF1A;</p>
+<ul>
+<li><code>enter-class</code></li>
+<li><code>enter-active-class</code></li>
+<li><code>enter-to-class</code> (2.1.8+)</li>
+<li><code>leave-class</code></li>
+<li><code>leave-active-class</code></li>
+<li><code>leave-to-class</code> (2.1.8+)</li>
+</ul>
+<p>&#x4ED6;&#x4EEC;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x666E;&#x901A;&#x7684;&#x7C7B;&#x540D;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E; Vue &#x7684;&#x8FC7;&#x6E21;&#x7CFB;&#x7EDF;&#x548C;&#x5176;&#x4ED6;&#x7B2C;&#x4E09;&#x65B9; CSS &#x52A8;&#x753B;&#x5E93;&#xFF0C;&#x5982; <a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> &#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x5341;&#x5206;&#x6709;&#x7528;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/animate.css@3.5.1&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-3&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;show = !show&quot;</span>&gt;</span>
+    Toggle render
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">transition</span>
+    <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;custom-classes-transition&quot;</span>
+    <span class="hljs-attr">enter-active-class</span>=<span class="hljs-string">&quot;animated tada&quot;</span>
+    <span class="hljs-attr">leave-active-class</span>=<span class="hljs-string">&quot;animated bounceOutRight&quot;</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">new</span> Vue({
+  <span class="hljs-attr">el</span>: <span class="hljs-string">&apos;#example-3&apos;</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">show</span>: <span class="hljs-literal">true</span>
+  }
+})
+</code></pre>
+<p><link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css"></p>
+<p><div id="example-3" class="demo">
+  <button @click="show = !show">
+    Toggle render
+  </button>
+  <transition name="custom-classes-transition" enter-active-class="animated tada" leave-active-class="animated bounceOutRight">
+    <p v-if="show">hello</p>
+  </transition>
+</div></p>
+<script>
+new Vue({
+  el: '#example-3',
+  data: {
+    show: true
+  }
+})
+</script>
+
+
+<h3 id="&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x8FC7;&#x6E21;&#x548C;&#x52A8;&#x753B;">&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x8FC7;&#x6E21;&#x548C;&#x52A8;&#x753B;</h3>
+<p>Vue &#x4E3A;&#x4E86;&#x77E5;&#x9053;&#x8FC7;&#x6E21;&#x7684;&#x5B8C;&#x6210;&#xFF0C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x662F; <code>transitionend</code> &#x6216; <code>animationend</code> &#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x7ED9;&#x5143;&#x7D20;&#x5E94;&#x7528;&#x7684; CSS &#x89C4;&#x5219;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x5176;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#xFF0C;Vue &#x80FD;&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x7C7B;&#x578B;&#x5E76;&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x4E00;&#x4E9B;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x7ED9;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E24;&#x79CD;&#x8FC7;&#x6E21;&#x52A8;&#x6548;&#xFF0C;&#x6BD4;&#x5982; <code>animation</code> &#x5F88;&#x5FEB;&#x7684;&#x88AB;&#x89E6;&#x53D1;&#x5E76;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x800C; <code>transition</code> &#x6548;&#x679C;&#x8FD8;&#x6CA1;&#x7ED3;&#x675F;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E2D;&#xFF0C;&#x4F60;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>type</code> &#x7279;&#x6027;&#x5E76;&#x8BBE;&#x7F6E; <code>animation</code> &#x6216; <code>transition</code> &#x6765;&#x660E;&#x786E;&#x58F0;&#x660E;&#x4F60;&#x9700;&#x8981; Vue &#x76D1;&#x542C;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h3 id="&#x663E;&#x6027;&#x7684;&#x8FC7;&#x6E21;&#x6301;&#x7EED;&#x65F6;&#x95F4;">&#x663E;&#x6027;&#x7684;&#x8FC7;&#x6E21;&#x6301;&#x7EED;&#x65F6;&#x95F4;</h3>
+<blockquote>
+<p>2.2.0 &#x65B0;&#x589E;</p>
+</blockquote>
+<p>&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Vue &#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5F97;&#x51FA;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x7684;&#x5B8C;&#x6210;&#x65F6;&#x673A;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Vue &#x4F1A;&#x7B49;&#x5F85;&#x5176;&#x5728;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x7684;&#x6839;&#x5143;&#x7D20;&#x7684;&#x7B2C;&#x4E00;&#x4E2A; <code>transitionend</code> &#x6216; <code>animationend</code> &#x4E8B;&#x4EF6;&#x3002;&#x7136;&#x800C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x8FD9;&#x6837;&#x8BBE;&#x5B9A;&#x2014;&#x2014;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x7CBE;&#x5FC3;&#x7F16;&#x6392;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x5D4C;&#x5957;&#x7684;&#x5185;&#x90E8;&#x5143;&#x7D20;&#x76F8;&#x6BD4;&#x4E8E;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x7684;&#x6839;&#x5143;&#x7D20;&#x6709;&#x5EF6;&#x8FDF;&#x7684;&#x6216;&#x66F4;&#x957F;&#x7684;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>&lt;transition&gt;</code> &#x7EC4;&#x4EF6;&#x4E0A;&#x7684; <code>duration</code> &#x5C5E;&#x6027;&#x5B9A;&#x5236;&#x4E00;&#x4E2A;&#x663E;&#x6027;&#x7684;&#x8FC7;&#x6E21;&#x6301;&#x7EED;&#x65F6;&#x95F4; (&#x4EE5;&#x6BEB;&#x79D2;&#x8BA1;)&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span> <span class="hljs-attr">:duration</span>=<span class="hljs-string">&quot;1000&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x5236;&#x8FDB;&#x5165;&#x548C;&#x79FB;&#x51FA;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span> <span class="hljs-attr">:duration</span>=<span class="hljs-string">&quot;{ enter: 500, leave: 800 }&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<h3 id="javascript-&#x94A9;&#x5B50;">JavaScript &#x94A9;&#x5B50;</h3>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x5C5E;&#x6027;&#x4E2D;&#x58F0;&#x660E; JavaScript &#x94A9;&#x5B50;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span>
+  <span class="hljs-attr">v-on:before-enter</span>=<span class="hljs-string">&quot;beforeEnter&quot;</span>
+  <span class="hljs-attr">v-on:enter</span>=<span class="hljs-string">&quot;enter&quot;</span>
+  <span class="hljs-attr">v-on:after-enter</span>=<span class="hljs-string">&quot;afterEnter&quot;</span>
+  <span class="hljs-attr">v-on:enter-cancelled</span>=<span class="hljs-string">&quot;enterCancelled&quot;</span>
+
+  <span class="hljs-attr">v-on:before-leave</span>=<span class="hljs-string">&quot;beforeLeave&quot;</span>
+  <span class="hljs-attr">v-on:leave</span>=<span class="hljs-string">&quot;leave&quot;</span>
+  <span class="hljs-attr">v-on:after-leave</span>=<span class="hljs-string">&quot;afterLeave&quot;</span>
+  <span class="hljs-attr">v-on:leave-cancelled</span>=<span class="hljs-string">&quot;leaveCancelled&quot;</span>
+&gt;</span>
+  <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// ...</span>
+methods: {
+  <span class="hljs-comment">// --------</span>
+  <span class="hljs-comment">// &#x8FDB;&#x5165;&#x4E2D;</span>
+  <span class="hljs-comment">// --------</span>
+
+  beforeEnter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  },
+  <span class="hljs-comment">// &#x6B64;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x662F;&#x53EF;&#x9009;&#x9879;&#x7684;&#x8BBE;&#x7F6E;</span>
+  <span class="hljs-comment">// &#x4E0E; CSS &#x7ED3;&#x5408;&#x65F6;&#x4F7F;&#x7528;</span>
+  enter: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, done</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+    done()
+  },
+  <span class="hljs-attr">afterEnter</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  },
+  <span class="hljs-attr">enterCancelled</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  },
+
+  <span class="hljs-comment">// --------</span>
+  <span class="hljs-comment">// &#x79BB;&#x5F00;&#x65F6;</span>
+  <span class="hljs-comment">// --------</span>
+
+  beforeLeave: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  },
+  <span class="hljs-comment">// &#x6B64;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x662F;&#x53EF;&#x9009;&#x9879;&#x7684;&#x8BBE;&#x7F6E;</span>
+  <span class="hljs-comment">// &#x4E0E; CSS &#x7ED3;&#x5408;&#x65F6;&#x4F7F;&#x7528;</span>
+  leave: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, done</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+    done()
+  },
+  <span class="hljs-attr">afterLeave</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  },
+  <span class="hljs-comment">// leaveCancelled &#x53EA;&#x7528;&#x4E8E; v-show &#x4E2D;</span>
+  leaveCancelled: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+  }
+}
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7ED3;&#x5408; CSS <code>transitions/animations</code> &#x4F7F;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x3002;</p>
+<p class="tip">&#x5F53;&#x53EA;&#x7528; JavaScript &#x8FC7;&#x6E21;&#x7684;&#x65F6;&#x5019;&#xFF0C;** &#x5728; `enter` &#x548C; `leave` &#x4E2D;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570; `done` &#x662F;&#x5FC5;&#x987B;&#x7684; **&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x88AB;&#x540C;&#x6B65;&#x8C03;&#x7528;&#xFF0C;&#x8FC7;&#x6E21;&#x4F1A;&#x7ACB;&#x5373;&#x5B8C;&#x6210;&#x3002;</p>
+
+<p class="tip">&#x63A8;&#x8350;&#x5BF9;&#x4E8E;&#x4EC5;&#x4F7F;&#x7528; JavaScript &#x8FC7;&#x6E21;&#x7684;&#x5143;&#x7D20;&#x6DFB;&#x52A0; `v-bind:css=&quot;false&quot;`&#xFF0C;Vue &#x4F1A;&#x8DF3;&#x8FC7; CSS &#x7684;&#x68C0;&#x6D4B;&#x3002;&#x8FD9;&#x4E5F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8FC7;&#x6E21;&#x8FC7;&#x7A0B;&#x4E2D; CSS &#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+
+<p>&#x4E00;&#x4E2A;&#x4F7F;&#x7528; Velocity.js &#x7684;&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!--
+Velocity &#x548C; jQuery.animate &#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x662F;&#x7528;&#x6765;&#x5B9E;&#x73B0; JavaScript &#x52A8;&#x753B;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x68D2;&#x7684;&#x9009;&#x62E9;
+--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-4&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;show = !show&quot;</span>&gt;</span>
+    Toggle
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">transition</span>
+    <span class="hljs-attr">v-on:before-enter</span>=<span class="hljs-string">&quot;beforeEnter&quot;</span>
+    <span class="hljs-attr">v-on:enter</span>=<span class="hljs-string">&quot;enter&quot;</span>
+    <span class="hljs-attr">v-on:leave</span>=<span class="hljs-string">&quot;leave&quot;</span>
+    <span class="hljs-attr">v-bind:css</span>=<span class="hljs-string">&quot;false&quot;</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>
+      Demo
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">new</span> Vue({
+  <span class="hljs-attr">el</span>: <span class="hljs-string">&apos;#example-4&apos;</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">show</span>: <span class="hljs-literal">false</span>
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">beforeEnter</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>{
+      el.style.opacity = <span class="hljs-number">0</span>
+      el.style.transformOrigin = <span class="hljs-string">&apos;left&apos;</span>
+    },
+    <span class="hljs-attr">enter</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, done</span>) </span>{
+      Velocity(el, { <span class="hljs-attr">opacity</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">fontSize</span>: <span class="hljs-string">&apos;1.4em&apos;</span> }, { <span class="hljs-attr">duration</span>: <span class="hljs-number">300</span> })
+      Velocity(el, { <span class="hljs-attr">fontSize</span>: <span class="hljs-string">&apos;1em&apos;</span> }, { <span class="hljs-attr">complete</span>: done })
+    },
+    <span class="hljs-attr">leave</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, done</span>) </span>{
+      Velocity(el, { <span class="hljs-attr">translateX</span>: <span class="hljs-string">&apos;15px&apos;</span>, <span class="hljs-attr">rotateZ</span>: <span class="hljs-string">&apos;50deg&apos;</span> }, { <span class="hljs-attr">duration</span>: <span class="hljs-number">600</span> })
+      Velocity(el, { <span class="hljs-attr">rotateZ</span>: <span class="hljs-string">&apos;100deg&apos;</span> }, { <span class="hljs-attr">loop</span>: <span class="hljs-number">2</span> })
+      Velocity(el, {
+        <span class="hljs-attr">rotateZ</span>: <span class="hljs-string">&apos;45deg&apos;</span>,
+        <span class="hljs-attr">translateY</span>: <span class="hljs-string">&apos;30px&apos;</span>,
+        <span class="hljs-attr">translateX</span>: <span class="hljs-string">&apos;30px&apos;</span>,
+        <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>
+      }, { <span class="hljs-attr">complete</span>: done })
+    }
+  }
+})
+</code></pre>
+<p><div id="example-4" class="demo">
+  <button @click="show = !show">
+    Toggle
+  </button>
+  <transition v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave">
+    <p v-if="show">
+      Demo
+    </p>
+  </transition>
+</div></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<script>
+new Vue({
+  el: '#example-4',
+  data: {
+    show: false
+  },
+  methods: {
+    beforeEnter: function (el) {
+      el.style.opacity = 0
+      el.style.transformOrigin = 'left'
+    },
+    enter: function (el, done) {
+      Velocity(el, { opacity: 1, fontSize: '1.4em' }, { duration: 300 })
+      Velocity(el, { fontSize: '1em' }, { complete: done })
+    },
+    leave: function (el, done) {
+      Velocity(el, { translateX: '15px', rotateZ: '50deg' }, { duration: 600 })
+      Velocity(el, { rotateZ: '100deg' }, { loop: 2 })
+      Velocity(el, {
+        rotateZ: '45deg',
+        translateY: '30px',
+        translateX: '30px',
+        opacity: 0
+      }, { complete: done })
+    }
+  }
+})
+</script>
+
+
+<h2 id="&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x7684;&#x8FC7;&#x6E21;">&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x7684;&#x8FC7;&#x6E21;</h2>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>appear</code> &#x7279;&#x6027;&#x8BBE;&#x7F6E;&#x8282;&#x70B9;&#x5728;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x7684;&#x8FC7;&#x6E21;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span> <span class="hljs-attr">appear</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x9ED8;&#x8BA4;&#x548C;&#x8FDB;&#x5165;/&#x79BB;&#x5F00;&#x8FC7;&#x6E21;&#x4E00;&#x6837;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49; CSS &#x7C7B;&#x540D;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span>
+  <span class="hljs-attr">appear</span>
+  <span class="hljs-attr">appear-class</span>=<span class="hljs-string">&quot;custom-appear-class&quot;</span>
+  <span class="hljs-attr">appear-to-class</span>=<span class="hljs-string">&quot;custom-appear-to-class&quot;</span> (<span class="hljs-attr">2.1.8</span>+)
+  <span class="hljs-attr">appear-active-class</span>=<span class="hljs-string">&quot;custom-appear-active-class&quot;</span>
+&gt;</span>
+  <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<p>&#x81EA;&#x5B9A;&#x4E49; JavaScript &#x94A9;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span>
+  <span class="hljs-attr">appear</span>
+  <span class="hljs-attr">v-on:before-appear</span>=<span class="hljs-string">&quot;customBeforeAppearHook&quot;</span>
+  <span class="hljs-attr">v-on:appear</span>=<span class="hljs-string">&quot;customAppearHook&quot;</span>
+  <span class="hljs-attr">v-on:after-appear</span>=<span class="hljs-string">&quot;customAfterAppearHook&quot;</span>
+  <span class="hljs-attr">v-on:appear-cancelled</span>=<span class="hljs-string">&quot;customAppearCancelledHook&quot;</span>
+&gt;</span>
+  <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<h2 id="&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FC7;&#x6E21;">&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FC7;&#x6E21;</h2>
+<p>&#x6211;&#x4EEC;&#x4E4B;&#x540E;&#x8BA8;&#x8BBA;<a href="#&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x8FC7;&#x6E21;">&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x8FC7;&#x6E21;</a>&#xFF0C;&#x5BF9;&#x4E8E;&#x539F;&#x751F;&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>v-if</code>/<code>v-else</code> &#x3002;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x591A;&#x6807;&#x7B7E;&#x8FC7;&#x6E21;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x548C;&#x63CF;&#x8FF0;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x4E3A;&#x7A7A;&#x6D88;&#x606F;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;items.length &gt; 0&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-else</span>&gt;</span>Sorry, no items found.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
+<p class="tip">&#x5F53;&#x6709;**&#x76F8;&#x540C;&#x6807;&#x7B7E;&#x540D;**&#x7684;&#x5143;&#x7D20;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7; `key` &#x7279;&#x6027;&#x8BBE;&#x7F6E;&#x552F;&#x4E00;&#x7684;&#x503C;&#x6765;&#x6807;&#x8BB0;&#x4EE5;&#x8BA9; Vue &#x533A;&#x5206;&#x5B83;&#x4EEC;&#xFF0C;&#x5426;&#x5219; Vue &#x4E3A;&#x4E86;&#x6548;&#x7387;&#x53EA;&#x4F1A;&#x66FF;&#x6362;&#x76F8;&#x540C;&#x6807;&#x7B7E;&#x5185;&#x90E8;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x5373;&#x4F7F;&#x5728;&#x6280;&#x672F;&#x4E0A;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#xFF0C;**&#x7ED9;&#x5728; `<transition>` &#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x8BBE;&#x7F6E; key &#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x5B9E;&#x8DF5;&#x3002;**</transition></p>
+
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;isEditing&quot;</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;save&quot;</span>&gt;</span>
+    Save
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-else</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;edit&quot;</span>&gt;</span>
+    Edit
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x4E00;&#x4E9B;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684; <code>key</code> &#x7279;&#x6027;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x6765;&#x4EE3;&#x66FF; <code>v-if</code> &#x548C; <code>v-else</code>&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x91CD;&#x5199;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-bind:key</span>=<span class="hljs-string">&quot;isEditing&quot;</span>&gt;</span>
+    {{ isEditing ? &apos;Save&apos; : &apos;Edit&apos; }}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span>
+</code></pre>
+</transition></transition>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="componentsReg.html" class="navigation navigation-prev " aria-label="Previous page: 组件注册">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tool.html" class="navigation navigation-next " aria-label="Next page: 工具">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"过渡 & 动画","type":"guide","order":201,"level":"1.4","depth":1,"next":{"title":"工具","level":"1.5","depth":1,"path":"docs/tool.md","ref":"docs/tool.md","articles":[]},"previous":{"title":"组件注册","level":"1.3.1","depth":2,"path":"docs/componentsReg.md","ref":"docs/componentsReg.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/transitions.md","mtime":"2018-06-04T07:09:23.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-05T03:09:45.665Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+
